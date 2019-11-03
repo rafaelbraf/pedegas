@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "177801526094",
+    "firebase_url": "https://aplicativodogas.firebaseio.com",
+    "project_id": "aplicativodogas",
+    "storage_bucket": "aplicativodogas.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:177801526094:android:c16ec8f518466c599ebc1f",
+        "android_client_info": {
+          "package_name": "com.example.appdogas"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "177801526094-htmirq55vf1k3uo1i1mlm5br1b1n1c65.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.appdogas",
+            "certificate_hash": "b64e6b69962693fdbb743c9ad4091b60d4813e14"
+          }
+        },
+        {
+          "client_id": "177801526094-bhmih00api2ic6v0lvighn261iq709mm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBubBsKhDHMcCwSneCoZgIzx2fjKfQHulI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "177801526094-bhmih00api2ic6v0lvighn261iq709mm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
