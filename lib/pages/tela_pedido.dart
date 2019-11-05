@@ -409,7 +409,7 @@ class _TelaPedidoState extends State<TelaPedido> {
       });
     } else {
       setState(() {
-        endereco = "$logradouro, $numero $complemento - $bairro - $cidade";
+        endereco = "$logradouro, $numero $complemento - $bairro";
         _mensagemErro = "";
       });
     }

@@ -96,12 +96,36 @@ class _AguardandoState extends State<Aguardando> {
   _mandarAvaliacao() async {
 
     String nota = _controllerNota.text;
+    int notaint = int.parse(nota);
 
-    db.collection('pedidos').document(_idPedido).updateData({
-      "avaliacao" : nota
-    });
+    if(notaint >= 1 && notaint <= 5) {
 
-    Navigator.pushReplacementNamed(context, "/tela_pedido");
+      db.collection('pedidos').document(_idPedido).updateData({
+      "avaliacao" : notaint
+      });
+
+      Navigator.pushReplacementNamed(context, "/tela_pedido");
+
+    } else {
+
+      showDialog(
+        context: context, 
+        builder: (context) {
+          return AlertDialog(
+            content: Text("Nota precisa ser de 1 a 5"),
+            actions: <Widget>[
+              FlatButton(
+                child: Text("OK"),
+                onPressed: () => Navigator.pop(context),
+              )
+            ],
+          );
+        }
+      );
+
+    }
+
+    
 
   }
 
