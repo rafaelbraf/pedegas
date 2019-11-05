@@ -15,6 +15,7 @@ class Pedido {
   String _horaPedidoRealizado;
   String _dataEntregaRealizada;
   String _horaEntregaRealizada;
+  String _avaliacao;
 
   Pedido(){
     Firestore db = Firestore.instance;    
@@ -47,7 +48,8 @@ class Pedido {
       "horaEntregaRealizada"  : "00:00",
       "formaPagamento"        : this.formaPagamento,
       "quantidade"            : this.quantidade,
-      "valorTotal"            : this.valorTotal
+      "valorTotal"            : this.valorTotal,
+      "avaliacao"             : "Sem avaliação"
     };
 
     return dadosPedido;
@@ -88,6 +90,12 @@ class Pedido {
 
   set quantidade(int value) {
     _quantidade = value;
+  }
+
+  String get avaliacao => _avaliacao;
+
+  set avaliacao(String value) {
+    _avaliacao = value;
   }
 
   String get formaPagamento => _formaPagamento;

@@ -1,4 +1,3 @@
-import 'package:appdogas/pages/home.dart';
 import 'package:appdogas/pages/splashscreen.dart';
 import 'package:appdogas/rotas.dart';
 import 'package:flutter/material.dart';

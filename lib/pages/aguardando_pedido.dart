@@ -13,6 +13,8 @@ class Aguardando extends StatefulWidget {
 
 class _AguardandoState extends State<Aguardando> {
 
+  TextEditingController _controllerNota = TextEditingController();
+
   final _controller = StreamController<QuerySnapshot>.broadcast();
 
   Firestore db = Firestore.instance;
@@ -64,6 +66,73 @@ class _AguardandoState extends State<Aguardando> {
     db.collection('pedido_ativo').document(firebaseUser.phoneNumber).delete();
     
     Navigator.pushReplacementNamed(context, "/tela_pedido");
+
+  }
+
+  _confirmarPedido() {
+
+    showDialog(
+      context: context,
+      builder: (context) {
+        return AlertDialog(
+          title: Text("Avaliação de Serviço"),
+          content: Text("Deseja avaliar nosso serviço?"),
+          actions: <Widget>[            
+            FlatButton(
+              child: Text("Cancelar", style: TextStyle(color: Colors.red),),
+              onPressed: () => Navigator.pushReplacementNamed(context, "/tela_pedido")
+            ),
+            FlatButton(
+              child: Text("Avaliar"),
+              onPressed: _avaliarPedido,
+            ),
+          ],
+        );
+      }
+    );
+
+  }
+
+  _mandarAvaliacao() async {
+
+    String nota = _controllerNota.text;
+
+    db.collection('pedidos').document(_idPedido).updateData({
+      "avaliacao" : nota
+    });
+
+    Navigator.pushReplacementNamed(context, "/tela_pedido");
+
+  }
+
+  _avaliarPedido() {
+
+    showDialog(
+      context: context,
+      builder: (context) {
+        return AlertDialog(
+          title: Text("Avaliação"),
+          content: SingleChildScrollView(
+            child: Column(
+              children: <Widget>[
+                Text("De 1 a 5"),
+                Text("Avalie nosso serviço"),
+                TextField(                  
+                  controller: _controllerNota,
+                  keyboardType: TextInputType.number,
+                ),
+              ],
+            ),
+          ),
+          actions: <Widget>[
+            FlatButton(
+              child: Text("Enviar"),
+              onPressed: _mandarAvaliacao
+            )
+          ],
+        );
+      }
+    );
 
   }
 
@@ -255,7 +324,7 @@ class _AguardandoState extends State<Aguardando> {
                                     "Confirmar entrega", style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),                    
                                   ),
                                   onPressed: () {
-                                    Navigator.pushReplacementNamed(context, "/tela_pedido");
+                                    _confirmarPedido();
                                   }
                                 ),
                               )
