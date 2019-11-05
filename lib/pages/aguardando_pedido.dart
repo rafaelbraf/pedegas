@@ -122,11 +122,7 @@ class _AguardandoState extends State<Aguardando> {
           );
         }
       );
-
     }
-
-    
-
   }
 
   _avaliarPedido() {
