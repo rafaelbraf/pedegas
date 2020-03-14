@@ -30,6 +30,7 @@ class _TelaPedidoState extends State<TelaPedido> {
   String endereco = "Informar endereço para entrega";
   String nome;
   String _mensagemErro = "";
+  String enderecoUsuario;
 
   StreamSubscription<DocumentSnapshot> _streamSubscriptionRequisicoes;
   final _controller = StreamController<QuerySnapshot>.broadcast();
@@ -116,15 +117,16 @@ class _TelaPedidoState extends State<TelaPedido> {
   _recuperarDados() async {
     Usuario usuario = await UsuarioFirebase.getDadosUsuarioLogado();
 
-    if(usuario.nome == null && usuario.telefone == null) {
+    if(usuario.nome == null && usuario.endereco == null) {
       setState(() {
        nome = "Carregando nome...";
-       telefone = "Carregando telefone..."; 
+       enderecoUsuario = "Carregando endereço...";
       });
     } else {
       setState(() {
         nome = usuario.nome;
         telefone = usuario.telefone; 
+        enderecoUsuario = usuario.endereco;
       });
     }
     
@@ -409,7 +411,7 @@ class _TelaPedidoState extends State<TelaPedido> {
       });
     } else {
       setState(() {
-        endereco = "$logradouro, $numero $complemento - $bairro - $cidade";
+        endereco = "$logradouro, $numero $complemento - $bairro";
         _mensagemErro = "";
       });
     }
@@ -568,7 +570,7 @@ class _TelaPedidoState extends State<TelaPedido> {
               color: Color(0xff388E3C),
                 child: ListTile(
                 title: Text("$nome", style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white),),
-                subtitle: Text("$telefone", style: TextStyle(color: Colors.white),),
+                subtitle: Text("$enderecoUsuario", style: TextStyle(color: Colors.white),),
                 trailing: IconButton(icon: Icon(Icons.edit, color: Colors.white), onPressed: _editarUsuario,),
                 onTap: _editarUsuario,
               ),
