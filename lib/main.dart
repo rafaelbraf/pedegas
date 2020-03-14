@@ -9,7 +9,7 @@ final ThemeData temaPadrao = ThemeData(
 );
 
 void main() => runApp(MaterialApp(
-  title: "App do Gás",
+  title: "PedeGás",
   home: SplashScreen(),
   theme: temaPadrao,
   initialRoute: "/",

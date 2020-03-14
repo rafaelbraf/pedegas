@@ -22,15 +22,24 @@ class _SplashScreenState extends State<SplashScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
+        alignment: Alignment.center,
         color: Colors.white,
-        child: Stack(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Positioned(
-              bottom: 0,
-              left: 0,
-              right: 0,
-              child: Image.asset(
-                "images/splash6.png"
+            Image.asset(
+              "images/gas.png"
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            Text(
+              "PedeGás",
+              style: TextStyle(
+                fontSize: 32,
+                color: Colors.green,
+                fontWeight: FontWeight.bold
               ),
             )
           ],

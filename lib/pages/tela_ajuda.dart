@@ -14,7 +14,7 @@ class _AjudaState extends State<Ajuda> {
       ),
       body: Container(
         child: Center(
-          child: Text("Tá precisa de ajuda?"),
+          child: Text("Tá precisando de ajuda?"),
         ),
       ),
     );
