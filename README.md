@@ -4,6 +4,8 @@ Aplicativo para fazer pedidos de gás.
 # 1. O cliente faz autenticação do seu número
 ![Screenshot](1.jpg)
 ![Screenshot](2.jpg)
+
+# 2. Após a autenticação o cliente informa seu nome
 ![Screenshot](3.jpg)
 ![Screenshot](4.jpg)
 ![Screenshot](5.jpg)
