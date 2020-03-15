@@ -10,6 +10,8 @@ Aplicativo para fazer pedidos de gás.
 
 # 3. Ao preencher seus dados o cliente será direcionado para a tela de pedidos
 ![Screenshot](4.jpg)
+
+# 4. Apertando em "Informe endereço para entrega" o cliente informará o endereço
 ![Screenshot](5.jpg)
 ![Screenshot](6.jpg)
 ![Screenshot](7.jpg)
