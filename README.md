@@ -13,7 +13,7 @@ Dependências utilizadas: <br>
   connection_status_bar: ^1.1.1 <br>
   firebase_messaging: ^5.1.6 <br>
   
-=======================================================================================
+=========================================================================
 
 # 1. O cliente faz autenticação do seu número
 ![Screenshot](1.jpg)
