@@ -1,6 +1,7 @@
 # PedeGas
 Aplicativo para fazer pedidos de gás.
 
+# 1. O cliente faz autenticação do seu número
 ![Screenshot](1.jpg)
 ![Screenshot](2.jpg)
 ![Screenshot](3.jpg)
