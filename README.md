@@ -5,13 +5,13 @@ Linguagem utilizada: Dart/Flutter <br>
 Autenticação: Firebase <br>
 Banco de Dados: Firebase <br>
 Dependências utilizadas: <br>
-  cupertino_icons: ^0.1.2 <br>
-  firebase_auth: ^0.14.0+5 <br>
-  firebase_core: ^0.4.0+9 <br>
-  flutter_masked_text: ^0.8.0 <br>
-  cloud_firestore: ^0.12.9+4 <br>
-  connection_status_bar: ^1.1.1 <br>
-  firebase_messaging: ^5.1.6 <br>
+- cupertino_icons: ^0.1.2 <br>
+- firebase_auth: ^0.14.0+5 <br>
+- firebase_core: ^0.4.0+9 <br>
+- flutter_masked_text: ^0.8.0 <br>
+- cloud_firestore: ^0.12.9+4 <br>
+- connection_status_bar: ^1.1.1 <br>
+- firebase_messaging: ^5.1.6 <br>
   
 =========================================================================
 
