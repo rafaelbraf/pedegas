@@ -19,5 +19,9 @@ Aplicativo para fazer pedidos de gás.
 
 # 6. Quando o cliente apertar em "Fazer pedido" aparecerá um Alert Dialog para que o mesmo confira se está tudo certo
 ![Screenshot](7.jpg)
+
+# 7. Após confirmado que está tudo certo o pedido será enviado para a distribuidora e a distribuidora irá encaminhar para o entregador. O cliente poderá ficar  acompanhando o status do seu pedido sendo atualizado em tempo real, podendo cancelar dentro de 5 minutos ou confirmar a entrega quando o entregador chegar.
 ![Screenshot](8.jpg)
+
+# 8. Tela para que o cliente possa ver seus pedidos que foram realizados
 ![Screenshot](9.jpg)
