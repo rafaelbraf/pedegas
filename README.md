@@ -1,7 +1,7 @@
 # PedeGas
 Aplicativo para fazer pedidos de gás.
 
-Linguagem utilizada: Dart/Flutter
+Linguagem utilizada: Dart/Flutter <br>
 Autenticação: Firebase
 Banco de Dados: Firebase
 Dependências utilizadas:
