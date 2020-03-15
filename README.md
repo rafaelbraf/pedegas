@@ -16,6 +16,8 @@ Aplicativo para fazer pedidos de gás.
 
 # 5. Com a quantidade de gás, endereço e forma de pagamento preenchidos o cliente poderá fazer o pedido
 ![Screenshot](6.jpg)
+
+# 6. Quando o cliente apertar em "Fazer pedido" aparecerá um Alert Dialog para que o mesmo confira se está tudo certo
 ![Screenshot](7.jpg)
 ![Screenshot](8.jpg)
 ![Screenshot](9.jpg)
